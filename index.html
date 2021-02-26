@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Poloznica Jureta Bajca</title>
+		 <link rel="stylesheet" type="text/css" href="stil.css">
+		 <meta charset="UTF-8"> 
+	</head>
+	<body>
+	<form>
+		<div id="main">
+			<div id="talon">
+				<span class="txt">UPN</span>
+				<div>
+					<div class="txtRed" style="margin-left:4mm">Ime plačnika</div>
+					<input type="text" class="input1 redborder">
+				</div>
+				<div>
+					<div class="txtRed" style="margin-left:4mm">Namen / rok plačila</div>
+					<input type="text" class="input1 redborder">
+				</div>
+				<div>
+					<div class="txtRed znesek" style="margin-left:4mm">Znesek</div>
+					<div class="txtEUR talonEUR">EUR<input type="text" class="inputEUR redborder"></div>
+				</div>
+				<div>
+					<div class="txtRed" style="margin-left:4mm">IBAN prejemnika in BIC banke prejemnika</div>
+					<input style="height:13.5mm" type="text" class="input1 redborder">
+				</div>
+				<div>
+					<div class="txtRed" style="margin-left:4mm">Referenca prejemnika</div>
+					<input style="height: 5mm" type="text" class="input1 redborder">
+				</div>
+				<div>
+					<div class="txtRed" style="margin-left:4mm">Ime prejemnika</div>
+					<input type="text" class="input1 redborder">
+				</div>
+				<div>
+					<div class="txtRed help" style="margin-left:4mm">
+						Potrditev plačila UPN
+					</div>
+				</div>
+			</div>
+			<div id="zgornjiPredel">
+				<div class="flt">
+					<div class="crta" style="width:1.85mm"> </div>
+					<div class="placnik">
+						<div class="rotate">PLAČNIK</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<div class="fltr polje1">
+							<canvas id="podpis-canvas"></canvas>
+						</div>
+					</div>
+					<div>					
+						<div>
+							<div class="txtRed">IBAN</div>	
+							<div class="crta" style="width:65mm"></div>
+							<div class="txtRed" style="margin-left: 2mm;">POLOG</div>
+							<div class="crta" style="width:6.62mm; margin-left: 2mm;"></div>
+							<div class="txtRed" style="margin-left: 2mm;">DVIG</div>
+						</div>
+						<div>
+							<div class="IBAN" style="height:5mm;">
+								<input type="text" class="inputIBAN redborder"></input>
+							</div>
+							<div>
+								<input type="checkbox" class="checkbuttons" name="pologdvig" value="polog"></input>
+								<div class="oznaka1"></div>
+								<input type="checkbox" class="checkbuttons" name="pologdvig" value="dvig"></input>
+							</div>
+						</div>
+												
+						<div class="flt "> 
+							<div class="txtRed">Referenca</div>
+							<div class="clrflt" style="width:15mm;"><input type="text" class="inputIBAN redborder"></input></div>
+							<div class="flt" style="width:82.5mm; margin-left: 2mm;"><input type="text" class="inputIBAN redborder"></input></div>
+						</div>
+						
+						<div class="flt">
+							<div class="txtRed">Ime in naslov</div>
+							<div class="clrflt" style="width:99.5mm; height: 9mm;"><input type="text" class="inputIBAN redborder"></input></div>
+						</div>
+						
+						<div class="flt">
+							<div class="txtRed">Koda namena</div>
+							<div class="clrflt" style="width:15mm;"><input type="text" class="inputIBAN redborder"></input></div>
+						</div>
+						
+						<div class="flt marg margT">
+							<div class="txtRed">Namen / rok plačila</div>
+							<div class="clrflt" style="width:112.5mm;"><input type="text" class="inputIBAN redborder"></input></div>
+						</div>
+						
+						<div class="flt marg">
+							<div class="txtRed">Nujno</div>
+							<div class="checkNujno">
+								<input type="checkbox" style="margin-left: 1mm;" class="clrflt checkNujno" name="nujno" value="nujno"></input>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="srednjiPredel">
+			
+				<div>
+					<div>					
+						<div style="height: 12px" class="flt">
+							<div class="crta" style="width:12.35mm"> </div>
+							<div class="txtRed">Znesek</div>	
+							<div class="crta" style="width:34.4mm"></div>
+							<div class="txtRed" style="margin-left: 2mm;">Datum plačila</div>
+							<div class="crta" style="width:16.44mm; margin-left: 2mm;"></div>
+							<div class="txtRed" style="margin-left: 2mm;">BIC banke prejemnika</div>
+							<div class="crta" style="width:16mm; margin-left: 2mm;"></div>
+						</div>
+					</div>
+					
+					<div class="clrflt">
+						<div class="placnik" style="height:34mm;">
+							<div class="rotate">PREJEMNIK</div>
+						</div>
+					</div>
+					
+					<div>
+						<div class="txtEUR flt" style="margin-left: 1mm;">EUR</div>
+						<div class="flt" style="width:41.25mm; margin-left: 2mm;"><input type="text" class="inputIBAN redborder"></input></div>
+						<div class="flt" style="width:30mm; margin-left: 5mm;"><input type="text" class="inputIBAN redborder"></input></div>
+						<div class="flt" style="width:40mm; margin-left: 5mm;"><input type="text" class="inputIBAN redborder"></input></div>
+						<div class="oznaka1"></div>
+					</div>
+					
+					<div>
+						<div class="flt">
+							<div class="txtRed">IBAN</div>
+							<div class="clrflt" style="width:127.5mm;"><input type="text" class="inputIBAN redborder"></input></div>
+						</div>
+						<div>
+							<div class="txtRed" style="margin-left: 8mm;">Izjava</div>
+							<input type="checkbox" class="checkIzjava flt" name="izjava" value="true"></input>
+						</div>
+					</div>
+					
+					<div>
+						<div class="flt">
+							<div class="txtRed">Referenca</div>
+							<div class="clrflt" style="width:15mm;"><input type="text" class="inputIBAN redborder"></input></div>
+							<div class="flt marg" style="width:82.5mm;"><input type="text" class="inputIBAN redborder"></input></div>
+							<div class="txtEUR flt marg">UPN</div><div class="txtEUR smallFont flt"> - Univerzalni plačilni nalog</div>
+						</div>
+					</div>
+					
+					<div>
+						<div class="flt">
+							<div class="txtRed">Ime in naslov</div>
+							<div class="clrflt" style="width:131.25mm; height: 9mm;"><input type="text" class="inputIBAN redborder"></input></div>
+							<div class="oznaka1 marg"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="spodnjiPredel">
+					<div class="txtRed help" style="left:2.5mm;">Prosimo, ne pišite in ne žigosajte v tem prostoru</div>
+					<div class="txtRed help" style="left:113mm;">Obrazec UPN - Univerzalni plačilni nalog</div>
+			</div>
+		</div>
+		<script>
+			var canvas = document.getElementById("podpis-canvas");
+			var context = canvas.getContext("2d");
+			
+			canvas.width = 162;
+			canvas.height = 75;
+
+			var points = [];
+			var last = 0;
+			var color = "#000000";
+			var size = 2;
+
+			canvas.onmousemove = function(e) {
+			  if (e.buttons == 1) {
+				var offsets = canvas.getBoundingClientRect();
+				var zgoraj = offsets.top;
+				var levo = offsets.left;
+				addClick(e.pageX - levo, e.pageY - zgoraj, true);
+				redraw();
+			  }
+			}
+
+			canvas.onmousedown = function(e) {
+				var offsets = canvas.getBoundingClientRect();
+				var zgoraj = offsets.top;
+				var levo = offsets.left;
+			  addClick(e.pageX - levo, e.pageY - zgoraj, false);
+			  redraw();
+			}
+
+			function addClick(x, y, dragging) {
+			  points.push({x: x, y: y, dragging: dragging });
+			}
+
+			context.lineJoin = "round";
+
+			function redraw() {
+			  context.strokeStyle = color;
+			  context.lineWidth = size;
+			  for (var i = last; i < points.length; i++) {
+				context.beginPath();
+				if (points[i].dragging && i)
+				  context.moveTo(points[i - 1].x, points[i - 1].y);
+				else
+				  context.moveTo(points[i].x, points[i].y);
+				context.lineTo(points[i].x, points[i].y);
+				
+				context.closePath();
+				context.stroke();
+			  }
+			  
+			  last = points.length;
+			}
+		</script>
+	</form>
+	</body>
+</html>
